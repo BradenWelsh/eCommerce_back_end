@@ -30,14 +30,44 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
-});
+  Category.create({
+    categoryName: req.body.categoryName,
+  }) .then((allData)=>res.json(allData))
+  .catch((err) =>{
+    res.status(500).json(err);
+  });});
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-});
+  Category.update({
+    categoryName: req.body.categoryName,
+  },{
+    where:{
+      id: req.params.id,
+    },})
+  .then((allData) =>{
+    if(!allData) {
+      res.status(404).json({message: "No categories with the ID"});
+      return;
+    }
+    res.json(allData);
+  }).catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });});
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
-});
+  Category.delete({
+    where:{ id: req.params.id,},
+  }) .then((allData) => {
+    if(!allData) {
+      res.status(404).json({message: "No category found with this ID"});
+      return;
+    } res.json(allData);
+  }) .catch((err) =>{
+      console.log(err);
+      res.status(500).json(err);
+  });});
 
 module.exports = router;
