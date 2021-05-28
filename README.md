@@ -18,7 +18,6 @@
 * <a href="https://github.com/BradenWelsh/eCommerce_back_end" rel="nofollow">https://github.com/BradenWelsh/eCommerce_back_end</a>
 * <img src="./img/gif.gif" alt="gif of how to use">
 
-
 ## Questions ✋
 * ✋ Find me on Github @ [BradenWelsh](http://github.com/BradenWelsh)
 * ✉️For questions about this project please contact me @: Braden112299@gmail.com.
