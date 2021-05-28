@@ -16,11 +16,8 @@
 
 ## Video and Link to Deployed Site
 * <a href="https://github.com/BradenWelsh/eCommerce_back_end" rel="nofollow">https://github.com/BradenWelsh/eCommerce_back_end</a>
-<<<<<<< HEAD
 * <img src="./img/gif.gif" alt="gif of how to use">
-=======
-* <img src="/img/gif.gif" alt="gif of how to use">
->>>>>>> 868690a5612f8de2c89a899eb0d3cff60c0ecbdf
+
 
 ## Questions ✋
 * ✋ Find me on Github @ [BradenWelsh](http://github.com/BradenWelsh)
