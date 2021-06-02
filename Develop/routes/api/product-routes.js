@@ -7,9 +7,9 @@ router.get('/', (req, res) => {
   product.findAll({
     include: [
       { model: Category,
-        attributes: ["categoryName"],
+        attributes: ["category_name"],
       },{ model: Tag,
-        attributes: ["tagName"],
+        attributes: ["tag_name"],
       },],
   }) .then((data)=> res.json(data))
      .catch((err)=> {console.log(err); res.status(500).json(err);})
@@ -22,9 +22,9 @@ router.get('/:id', (req, res) => {
     where: { id: req.params.id},
     include: [
       { model: Category,
-        attributes: ['categoryName'],
+        attributes: ['category_name'],
       },{ model: Tag,
-          attributes: ['tagName'],
+          attributes: ['tag_name'],
       },],
   }) .then((data)=> res.json(data))
      .catch((err)=> {console.log(err); res.status(500).json(err);})

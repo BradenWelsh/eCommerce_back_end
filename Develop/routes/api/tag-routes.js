@@ -15,15 +15,15 @@ router.get('/:id', (req, res) => {
   Tag.findOne({
     where: { id: req.params.id, },
     include: { model: Product,},
-  })})
+  })
   .then((data) => res.json(data))
   .catch((err) => {console.log(err); res.status(500).json(err);
-});
+})});
 
 router.post('/', (req, res) => {
   // create a new tag
   Tag.create({
-    tagName: req.body.tagName,
+    tag_name: req.body.tag_name,
   })
   .then((data) => res.json(data))
   .catch((err) => {console.log(err); res.status(500).json(err);
@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
   Tag.update({
-    tagName: req.params.tagName,
+    tag_name: req.params.tag_name,
   },{where: {
     id: req.params.id, },
   }) .then((data) => {

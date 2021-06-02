@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   Category.findAll({
     include: {
       model: Product,
-      attributes: ["productName"]
+      attributes: ["product_name"]
     },})
     .then((allData) => res.json(allData))
     .catch((err) => {
@@ -16,12 +16,12 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
-  Category.fineOne({
+  Category.findOne({
     where:{
       id: req.params.id,
     }, include: {
       model: Product,
-      attributes: [categoryID]
+      attributes: ["category_id"]
     },})
     .then((allData) => res.json(allData))
     .catch((err) => {
@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // create a new category
   Category.create({
-    categoryName: req.body.categoryName,
+    category_name: req.body.category_name,
   }) .then((allData)=>res.json(allData))
   .catch((err) =>{
     res.status(500).json(err);
@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
   Category.update({
-    categoryName: req.body.categoryName,
+    category_name: req.body.category_name,
   },{
     where:{
       id: req.params.id,
