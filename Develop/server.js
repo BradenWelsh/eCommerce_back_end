@@ -16,8 +16,6 @@ app.use(routes);
 sequelize.sync({ force: true }).then(() => {
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
-  console.log(process.env.DB_NAME);
-  console.log(process.env.DB_USER);
-  console.log(process.env.DB_PW);
+
 });
 });
