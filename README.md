@@ -17,6 +17,7 @@
 ## Video and Link to Deployed Site
 * <a href="https://github.com/BradenWelsh/eCommerce_back_end" rel="nofollow">https://github.com/BradenWelsh/eCommerce_back_end</a>
 * <img src="./img/gif.gif" alt="gif of how to use">
+* <img src="./img/mp4.mp4" alt="mp4 of insomnia in use">
 
 ## Questions ✋
 * ✋ Find me on Github @ [BradenWelsh](http://github.com/BradenWelsh)
